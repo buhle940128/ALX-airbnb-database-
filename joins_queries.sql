@@ -74,3 +74,6 @@ PROPERTY id IN (
   count(1) as total booking
   RANK(1) OVER (1(2)
   ROW NUMBER(3)(2)as booking rank
+  API ENDPIONT 
+  Get/api/property/rankings
+  INPUTS
