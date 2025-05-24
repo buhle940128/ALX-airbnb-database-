@@ -68,3 +68,5 @@ PROPERTY id IN (
   WHERE b.user id=u.id
   SELECT user id,count(1)
   SELECT u.id,u name,count(1)
+  SELECT
+  p.id
