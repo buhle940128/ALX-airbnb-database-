@@ -63,6 +63,6 @@ PROPERTY id IN (
   SELECT u
   FROM user u
   WHERE(
-  SELECT COUNT(*)
+  SELECT COUNT(5)
   FROM booking b
   WHERE b.user id=u.id
