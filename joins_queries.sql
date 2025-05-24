@@ -71,4 +71,6 @@ PROPERTY id IN (
   SELECT
   p.id=property id
   p.name=property name
-  count(1)
+  count(1) as total booking
+  RANK(1) OVER (1(2)
+  ROW NUMBER(3)(2)as booking rank
