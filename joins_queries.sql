@@ -66,3 +66,4 @@ PROPERTY id IN (
   SELECT COUNT(5)
   FROM booking b
   WHERE b.user id=u.id
+  SELECT user id,count(
