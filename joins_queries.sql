@@ -43,3 +43,26 @@ FULL OUTER JOIN
 booking b
 ON
 u.user id=b.userid;
+subquery and average rating
+property id:primary key,UUID,indexed
+description:TEXT,NOT NULL
+location:VARCHAR,NOT NULL
+FROM 
+PROPERTY
+WHERE
+PROPERTY id IN (
+  SELECT
+  rating.property id
+  FROM
+  ratings
+  GROUP BY
+  ratings.property id
+  HAVING
+  AVG(rating.rating)>4.0
+  CORRELATED SUBQUERY
+  SELECT u
+  FROM user u
+  WHERE(
+  SELECT COUNT(*)
+  FROM booking b
+  WHERE b.user id=u.id
