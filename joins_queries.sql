@@ -69,4 +69,6 @@ PROPERTY id IN (
   SELECT user id,count(1)
   SELECT u.id,u name,count(1)
   SELECT
-  p.id
+  p.id=property id
+  p.name=property name
+  count(1)
