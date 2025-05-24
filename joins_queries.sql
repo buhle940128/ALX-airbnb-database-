@@ -67,4 +67,4 @@ PROPERTY id IN (
   FROM booking b
   WHERE b.user id=u.id
   SELECT user id,count(1)
-  SELECT u.id,u name,count(
+  SELECT u.id,u name,count(1)
