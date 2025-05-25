@@ -1,26 +1,4 @@
-user id:primary key,UUID,indexed
-first name:VARCHAR,NOT NULL
-email:VARCHAR,UNIQUE,NOT NULL
-booking id:primary key,UUID,Indexed
-start date:DATE, NOT NULL
-end date:DATE ,NOT NULL
-BOOKING
-booking id:primary key,UUID,indexed
-property id:Foreign key,references property(property id)
-user id:Foreign key,reference user(user id)
-start date:DATE,NOT NULL
-end date:DATE,NOT NULL
-total price:DECIMAL,NOT NULL
-status:ENUM(pending,comfirmed,canceled),NOT NULL
-PROPERTY
-property id:primary key,UUID,indexed
-host id:Foreign key,references user(user id)
-name:VARCHAR,NOT NULL
-description:TEXT,NOT NULL
-location:VARCHAR,NOT NULL
-price pernight:DECIMAL,NOT NULL
-created at:TIMESTAMP,DEFUALT CURRENT TIMESTAMP
-updated at:TIMESTAMP,ON UPDATE CURRENT TIMESTAMP
+
 INDEXED RECOMMENDATIONS
 | Table        | Suggested Indexes                                                |
 | ------------ | ---------------------------------------------------------------- |
