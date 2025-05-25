@@ -20,3 +20,4 @@ CREATE INDEX idx_properties_location ON properties(location);
 CREATE INDEX idx_properties_price ON properties(price);
 CREATE INDEX idx_properties_status ON properties(status);
 CREATE INDEX idx_properties_created_at ON properties(created_at);
+To measure SQL query performance before and after adding indexes for estimated query execution plans and for actual runtime performance
