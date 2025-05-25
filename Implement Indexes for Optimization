@@ -21,3 +21,10 @@ location:VARCHAR,NOT NULL
 price pernight:DECIMAL,NOT NULL
 created at:TIMESTAMP,DEFUALT CURRENT TIMESTAMP
 updated at:TIMESTAMP,ON UPDATE CURRENT TIMESTAMP
+INDEXED RECOMMENDATIONS
+| Table        | Suggested Indexes                                                |
+| ------------ | ---------------------------------------------------------------- |
+| `users`      | `email`, `status`, `created_at,end date`                                  |
+| `bookings`   | `(user_id, booking_date)`, `property_id`, `status`, `created_at`end date |
+| `properties` | `location`, `price`, `owner_id`, `status`, `created_at`updated at          |
+
