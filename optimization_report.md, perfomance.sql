@@ -8,3 +8,4 @@ first name:VARCHAR,NOT NULL
 email:VARCHAR,UNIQUE,NOT NULL
 property id:primary key,UUID,indexed
 location:VARCHAR,NOT NULL
+price pernight:DECIMAL,NOT NULL
