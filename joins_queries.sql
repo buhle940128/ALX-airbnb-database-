@@ -75,5 +75,34 @@ PROPERTY id IN (
   RANK(1) OVER (1(2)
   ROW NUMBER(3)(2)as booking rank
   API ENDPIONT 
-  Get/api/property/rankings
-  INPUTS
+  get('/api/property/rankings', async (req, res) => {
+  const client = await pool.connect();
+  try {
+    const result = await client.query(`
+      SELECT 
+        p.id AS property_id,
+        p.name AS property_name,
+        (
+            SELECT COUNT(1)
+            FROM bookings b
+            WHERE b.property_id = p.id
+        ) AS total_bookings,
+        RANK(1) OVER (2
+            ORDER BY (1
+                SELECT COUNT(1)
+                FROM bookings b
+                WHERE b.property_id = p.id
+            ) DESC
+        ) AS booking_rank
+      FROM properties p
+    `);
+
+    res.json(result.rows);
+  } catch (err) {
+    console.error('Error executing query', err.stack);
+    res.status(500).send('Internal server error');
+  } finally {
+    client.release(1);
+  }
+});
+
