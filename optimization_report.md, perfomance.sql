@@ -6,3 +6,4 @@ status:ENUM(pending,comfirmed,canceled),NOT NULL
 User id:primary key,uuid,indexed
 first name:VARCHAR,NOT NULL
 email:VARCHAR,UNIQUE,NOT NULL
+property id:primary key,UUID,indexed
