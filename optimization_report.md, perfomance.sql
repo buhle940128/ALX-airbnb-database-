@@ -12,3 +12,7 @@ price pernight:DECIMAL,NOT NULL
 payment id:primary key,UUID,Indexed
 amount:DECIMAL,NOT NULL
 payment date:TIMESTAMP,DEFAULT CURRENT TIMESTAMP
+FROM booking b
+JOIN user u on b.user id= u.id
+JOIN propperty p on b.property id=p id
+LEFT JOIN payment pay on b.id=pay.booking id
