@@ -1,1 +1,7 @@
+user id:primary key,UUID,indexed
+first name:VARCHAR,NOT NULL
+email:VARCHAR,UNIQUE,NOT NULL
+booking id:primary key,UUID,Indexed
+start date:DATE, NOT NULL
+end date:DATE ,NOT NULL
 
