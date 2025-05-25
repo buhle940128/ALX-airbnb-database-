@@ -11,3 +11,4 @@ location:VARCHAR,NOT NULL
 price pernight:DECIMAL,NOT NULL
 payment id:primary key,UUID,Indexed
 amount:DECIMAL,NOT NULL
+payment date:TIMESTAMP,DEFAULT CURRENT TIMESTAMP
