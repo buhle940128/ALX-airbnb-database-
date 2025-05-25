@@ -4,4 +4,11 @@ email:VARCHAR,UNIQUE,NOT NULL
 booking id:primary key,UUID,Indexed
 start date:DATE, NOT NULL
 end date:DATE ,NOT NULL
-
+BOOKING
+booking id:primary key,UUID,indexed
+property id:Foreign key,references property(property id)
+user id:Foreign key,reference user(user id)
+start date:DATE,NOT NULL
+end date:DATE,NOT NULL
+total price:DECIMAL,NOT NULL
+status:ENUM(pending,comfirmed,canceled),NOT NULL
