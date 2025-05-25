@@ -27,5 +27,4 @@ booking id:primary key,UUID,Indexed
 start date:DATE, NOT NULL
 end date:DATE ,NOT NULL
 
-To measure SQL query performance before and after adding indexes for estimated query execution plans and for actual runtime performance
 
