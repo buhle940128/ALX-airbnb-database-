@@ -9,3 +9,4 @@ email:VARCHAR,UNIQUE,NOT NULL
 property id:primary key,UUID,indexed
 location:VARCHAR,NOT NULL
 price pernight:DECIMAL,NOT NULL
+payment id:primary key,UUID,Indexed
